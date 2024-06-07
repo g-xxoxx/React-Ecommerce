@@ -31,6 +31,7 @@ const SearchContainer = styled.div`
 `
 const Input = styled.input`
   border: none;
+  outline: none;
 `
 const Center = styled.div`
   flex:1;
