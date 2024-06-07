@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
   width: 100vw;
@@ -18,6 +19,7 @@ const Wrapper = styled.div`
   width: 30%; 
   background-color: white;
   padding: 20px;
+  ${mobile({ width: "80%" })}
 `
 const Title = styled.h1`
   font-size: 24px;
@@ -49,20 +51,20 @@ const Link = styled.a`
 `
 
 const Login = () => {
-    return (
-        <Container>
-            <Wrapper>
-                <Title>SIGN IN</Title>
-                <Form>
-                    <Input placeholder="Username" />
-                    <Input placeholder="Password" />
-                    <Button>LOGIN</Button>
-                    <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-                    <Link>CREATE A NEW ACCOUNT</Link>
-                </Form>
-            </Wrapper>
-        </Container >
-    )
+  return (
+    <Container>
+      <Wrapper>
+        <Title>SIGN IN</Title>
+        <Form>
+          <Input placeholder="Username" />
+          <Input placeholder="Password" />
+          <Button>LOGIN</Button>
+          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
+          <Link>CREATE A NEW ACCOUNT</Link>
+        </Form>
+      </Wrapper>
+    </Container >
+  )
 }
 
 export default Login
